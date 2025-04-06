@@ -1,0 +1,175 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("../../assets/svg/hero-banner.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* Header styles */
+  .header {
+    width: 100%;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.2);
+    background: rgba(86, 44, 44, 0.7);
+    backdrop-filter: blur(7.5px);
+    color: white;
+    display: flex;
+    height: 72px;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+
+    color: #fff;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    text-transform: capitalize;
+    opacity: 0.8;
+
+    &:nth-child(1) {
+      margin-right: 75px;
+    }
+    &:nth-child(2) {
+      margin-right: 45px;
+    }
+    &:nth-child(3) {
+      margin-right: 25px;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .icon-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: opacity 0.2s;
+  }
+
+  .icon-button:hover {
+    opacity: 0.8;
+  }
+
+  .action-button {
+    width: 64px;
+    height: 40px;
+    border-radius: 33px;
+    background: var(--1, #f2542d);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 16px;
+  }
+
+  .action-button:hover {
+    opacity: 0.9;
+  }
+
+  /* Content styles */
+  .content-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 72px); /* Adjust for header height */
+  }
+
+  .image-container {
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow: hidden;
+  }
+
+  .action-image {
+    width: 80%;
+    object-fit: cover;
+  }
+
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+  }
+
+  .hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+    display: block;
+  }
+
+  /* Optional: Add animation for when the menu is clicked */
+  .hamburger-menu.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.active .line2 {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-menu,
+    .header-actions {
+      display: none;
+    }
+
+    .header {
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .hamburger-menu {
+      display: inline-block;
+    }
+
+    .logo {
+      width: auto;
+    }
+  }
+}
