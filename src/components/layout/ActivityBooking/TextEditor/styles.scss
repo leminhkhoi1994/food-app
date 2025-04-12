@@ -1,0 +1,116 @@
+.text-editor {
+  border-radius: 0.375rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  .toolbar {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .editor-content {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+
+    .ProseMirror {
+      padding: 1rem;
+      min-height: 200px;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      p {
+        margin-bottom: 0.75rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        margin-top: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+
+      ol {
+        list-style-type: decimal;
+      }
+
+      li {
+        margin-bottom: 0.25rem;
+      }
+
+      blockquote {
+        border-left: 3px solid #e5e7eb;
+        padding-left: 1rem;
+        color: #6b7280;
+        margin: 1rem 0;
+      }
+
+      pre {
+        background-color: #f3f4f6;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        font-family: monospace;
+        margin: 1rem 0;
+        overflow-x: auto;
+      }
+
+      code {
+        background-color: #f3f4f6;
+        padding: 0.125rem 0.25rem;
+        border-radius: 0.25rem;
+        font-family: monospace;
+      }
+
+      a {
+        color: #2563eb;
+        text-decoration: underline;
+
+        &:hover {
+          color: #1d4ed8;
+        }
+      }
+    }
+  }
+}
+
+.toolbar {
+  display: flex;
+  button {
+    border-color: white;
+    padding: 5px 5px;
+
+    
+  }
+  svg {
+    width: 15px;
+    color: #0e9594;
+  }
+}
