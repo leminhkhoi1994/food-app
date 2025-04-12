@@ -8,10 +8,9 @@ export function* getPageData({ payload }) {
   try {
     const lang = payload || "en"
     const respone = yield call(getData, { url: `/pages?lang=${lang}` })
-
-    if (respone || Array.isArray(respone) || respone.length > 0) {
+    if (respone?.data || Array.isArray(respone?.data) || respone?.data.length > 0) {
       yield delay(800)
-      yield put(getPageDataSuccess(respone))
+      yield put(getPageDataSuccess(respone?.data))
     }
   } catch (error) {
     const { message = "Something went wrong!" } = error

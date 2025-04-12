@@ -12,12 +12,12 @@ const pageDataSlice = createSlice({
       state.status = "loading"
     },
     getPageDataSuccess(state, action) {
-      state.data = action.payload
+      state.pageData = action.payload[0]
       state.status = "succeeded"
     },
     getPageDataFailure(state, action) {
       state.status = "failed"
-      state.data = {}
+      state.pageData = {}
       state.error = action.payload
     },
   },
@@ -31,4 +31,4 @@ export default reducer
 export const { getPageDataRequest, getPageDataSuccess, getPageDataFailure } = actions
 // Create and export each selector create by name
 export const rootSelector = (state) => state[ROOT_STATE_NAME] || {}
-export const pageDataSelector = createSelector(rootSelector, ({ error }) => error)
+export const pageDataSelector = createSelector(rootSelector, ({ pageData }) => pageData)

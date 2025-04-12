@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 const config = window?.config || {
-  BASE_URL: "https://dxsvh7md09j46.cloudfront.net/api",
+  BASE_URL: "https://api.test.soa-dev.net/api/v1",
 }
 
 export default {
