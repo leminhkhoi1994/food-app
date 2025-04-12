@@ -1,0 +1,5 @@
+export const CURRENT_PATH = "cylimzszhkjmdnqxcwro"
+export const ACCESS_TOKEN = "qzbxnulvxwbixthjovrf"
+export const ACCESS_TOKEN_SOCIAL_SERVICE = "mbqxdfaljzdrafvvldpc"
+export const USER_HAS_BEEN_LOGIN = "USER_HAS_BEEN_LOGIN"
+export const OPU_ACTIVATED = "OPU_ACTIVATED"

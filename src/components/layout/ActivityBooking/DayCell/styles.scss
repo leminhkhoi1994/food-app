@@ -1,0 +1,59 @@
+.day-cell {
+  height: 70px;
+
+  .selectedDate {
+    border: 1px solid aqua !important;
+    background: aliceblue !important;
+    .day-cell__date {
+      color: #ff5733;
+    }
+  }
+
+  &__day {
+    display: grid;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      .day-cell__date {
+        color: #ff5733;
+      }
+    }
+
+    &--disabled {
+      background-color: #f5f5f5;
+      color: #666666;
+      opacity: 0.7;
+    }
+
+    &--occupe {
+      background-color: #f5f5f5;
+    }
+
+    &--libre {
+      border-color: #ffded6;
+      color: #ff5733;
+      border-radius: 8px;
+      border: 1px solid #f2542d;
+      background: #fff4f1;
+    }
+  }
+
+  &__date {
+    color: #000;
+    font-size: 18px;
+  }
+
+  &__status {
+    font-size: 16px;
+    text-transform: capitalize;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+}
