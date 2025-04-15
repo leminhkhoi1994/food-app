@@ -5,8 +5,8 @@ import Placeholder from "@tiptap/extension-placeholder"
 import Underline from "@tiptap/extension-underline"
 import Link from "@tiptap/extension-link"
 import { useState } from "react"
-import Toolbar from "./toolbar"
 import "./styles.scss"
+import Toolbar from './Toolbar';
 
 export default function TextEditor({message, setMessage}) {
   const editor = useEditor({
