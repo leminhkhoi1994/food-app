@@ -81,7 +81,7 @@ const prodConfig = (env) => ({
     new HtmlWebpackPlugin({
       title: 'MMR',
       template: 'public/index.html',
-      // favicon: 'src/assets/images/favicon.ico',
+      favicon: 'src/assets/images/favicon.ico',
       publicPath: '/',
       inject: true,
       minify: {

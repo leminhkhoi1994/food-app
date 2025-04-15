@@ -33,7 +33,7 @@ const devConfig = (env) => ({
     new HtmlWebpackPlugin({
       title: 'SPDM',
       template: 'public/index.html',
-      // favicon: 'src/assets/images/favicon.ico',
+      favicon: 'src/assets/images/favicon.ico',
       inject: true,
     }),
     new MiniCssExtractPlugin({ ignoreOrder: true }),
